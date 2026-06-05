@@ -1,0 +1,101 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 210 50% 4%;
+    --foreground: 0 0% 100%;
+    --card: 210 50% 7%;
+    --card-foreground: 0 0% 100%;
+    --popover: 210 50% 4%;
+    --popover-foreground: 0 0% 100%;
+    --primary: 187 100% 50%;
+    --primary-foreground: 210 50% 4%;
+    --secondary: 210 50% 10%;
+    --secondary-foreground: 0 0% 100%;
+    --muted: 210 50% 10%;
+    --muted-foreground: 207 30% 60%;
+    --accent: 187 100% 50%;
+    --accent-foreground: 210 50% 4%;
+    --destructive: 0 100% 63%;
+    --destructive-foreground: 0 0% 100%;
+    --border: 210 50% 22%;
+    --input: 210 50% 22%;
+    --ring: 187 100% 50%;
+    --radius: 0.375rem;
+  }
+
+  html, body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+  }
+
+  body {
+    background-color: #050e1a;
+    color: #ffffff;
+    font-family: 'PingFang SC', 'Microsoft YaHei', 'Noto Sans SC', system-ui, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  #root {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+  }
+}
+
+@layer components {
+  /* Custom scrollbar for table areas */
+  .custom-scrollbar::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+  }
+
+  .custom-scrollbar::-webkit-scrollbar-track {
+    background: #050e1a;
+  }
+
+  .custom-scrollbar::-webkit-scrollbar-thumb {
+    background: #1a3a5c;
+    border-radius: 3px;
+  }
+
+  .custom-scrollbar::-webkit-scrollbar-thumb:hover {
+    background: #2a5a7c;
+  }
+
+  /* Firefox scrollbar */
+  .custom-scrollbar {
+    scrollbar-width: thin;
+    scrollbar-color: #1a3a5c #050e1a;
+  }
+
+  /* Data font for numbers */
+  .font-data {
+    font-family: 'Roboto Mono', 'JetBrains Mono', monospace;
+  }
+
+  /* Panel title with left cyan bar */
+  .panel-title {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 16px;
+    font-weight: 600;
+    color: #ffffff;
+  }
+
+  .panel-title::before {
+    content: '';
+    width: 3px;
+    height: 16px;
+    background-color: #00e5ff;
+    border-radius: 1px;
+    flex-shrink: 0;
+  }
+}
